@@ -1,6 +1,6 @@
 class Solution:
     def maxProfit(self, prices):
-        min_price = float(inf)
+        min_price = float('inf')
         max_profit = 0
 
         for price in prices:
