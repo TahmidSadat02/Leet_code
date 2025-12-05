@@ -1,7 +1,7 @@
 class Solution:
     def maxProfit(self, prices):
         buy = float('inf')
-        sell = 0
+        max_profit = 0
 
         for price in prices:
             if price < buy:
@@ -9,7 +9,7 @@ class Solution:
 
             profit = price - buy
 
-            if profit > sell:
-                sell = profit
+            if profit > max_profit:
+                max_profit = profit
 
-        return sell
+        return max_profit
