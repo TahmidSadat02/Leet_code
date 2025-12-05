@@ -1,15 +1,15 @@
 class Solution:
     def maxProfit(self, prices):
-        min_price = float('inf')
-        max_profit = 0
+        buy = float('inf')
+        sell = 0
 
         for price in prices:
-            if price < min_price:
-                min_price = price
+            if price < buy:
+                buy = price
 
-            profit = price - min_price
+            profit = price - buy
 
-            if profit > max_profit:
-                max_profit = profit
+            if profit > sell:
+                sell = profit
 
-        return max_profit
+        return sell
